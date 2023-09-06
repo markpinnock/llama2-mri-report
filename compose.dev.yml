@@ -1,0 +1,7 @@
+version: '1'
+
+services:
+  llama2:
+    volumes:
+      - "${MODEL_DIR}:/llama2-model"
+      - ./:/llama2
