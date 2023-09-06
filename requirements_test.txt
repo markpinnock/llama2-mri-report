@@ -1,0 +1,5 @@
+black==23.1.0
+flake8==6.0.0
+isort==5.9.3
+pre-commit==2.20.0
+tox==4.3.5
