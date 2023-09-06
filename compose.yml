@@ -1,0 +1,16 @@
+version: '1'
+
+services:
+  llama2:
+    image: markpinnock/llama2-mri-report
+    working_dir: /llama2
+    volumes:
+      - "${MODEL_DIR}:/llama2-model"
+    command: tail -F anything
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
